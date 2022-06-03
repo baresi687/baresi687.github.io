@@ -60,18 +60,6 @@ a:hover {
   text-align: center;
 }
 
-.tooltip {
-  position: absolute;
-  top: 35%;
-  left: 22%;
-  padding: 8px;
-  background-color: black;
-  border-radius: 8px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .2s ease-in;
-}
-
 .modal {
   position: fixed;
   width: 100%;
