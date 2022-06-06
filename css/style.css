@@ -30,8 +30,8 @@ a:hover {
   color: #C0C0C0;
 }
 
-.introduction {
-  padding-top: 16px;
+.introduction-content {
+  max-width: 544px;
 }
 
 .introduction h4 {
