@@ -22,12 +22,12 @@ p {
 }
 
 a {
-  color: #F5F5F5;
+  color: #46a6f7;
   text-underline-offset: 4px;
 }
 
 a:hover {
-  color: #C0C0C0;
+  color: #dbdbdb;
 }
 
 .introduction-content {
@@ -48,8 +48,8 @@ a:hover {
 }
 
 .portfolio {
-  margin: 48px auto;
-  padding: 8px 16px 16px;
+  margin: 64px auto;
+  padding: 24px 16px 16px;
   max-width: 784px;
   box-shadow: 0 0 13px -6px darkgrey;
   border-radius: 24px;
@@ -60,7 +60,11 @@ a:hover {
   margin-bottom: 24px;
   padding: 24px;
   border-radius: 4px;
-  background-color: #38383c;
+  background-color: #363a40;
+}
+
+.portfolio .projects > div:last-child {
+  margin-bottom: 0;
 }
 
 .portfolio .projects div img, .modal div img {
@@ -73,6 +77,7 @@ a:hover {
 
 .portfolio h3 {
   text-align: center;
+  margin-top: 0;
 }
 
 .modal {
@@ -111,12 +116,12 @@ a:hover {
   margin-bottom: 16px;
 }
 
-.bottom-contact {
-  margin: 80px 0 24px 0;
+footer {
+  margin: 104px 0 24px 0;
   text-align: center;
 }
 
-.bottom-contact div > div {
+footer div > div {
   margin: 16px;
 }
 
