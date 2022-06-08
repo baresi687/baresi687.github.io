@@ -1,6 +1,7 @@
 const screenShotModal = document.querySelector(".modal")
 const screenShotModalImg = document.querySelector(".modal div img")
-const screenShots = document.querySelectorAll(".projects div div > img")
+const screenShots = document.querySelectorAll(".projects div > img")
+const lightDarkModeToggle = document.querySelector(".light-dark-mode")
 
 screenShots.forEach((item) => {
   item.onclick = function () {
@@ -16,4 +17,8 @@ screenShotModal.onclick = ((event) => {
     screenShotModalImg.src = "";
     screenShotModalImg.alt = "";
   }
+})
+
+lightDarkModeToggle.onclick = (() => {
+  document.body.classList.toggle("light")
 })

@@ -1,11 +1,27 @@
+:root {
+  --bg-color: #27272c;
+  --text-color: #dbdbdb;
+  --a-color: #46a6f7;
+  --a-color-hover: #dbdbdb;
+  --projects-bg-color: #363a40;
+}
+
+.light {
+  --bg-color: #F8F8F8;
+  --text-color: #27272c;
+  --a-color: #0a72cb;
+  --a-color-hover: #27272c;
+  --projects-bg-color: #e3e3e3;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #27272c;
-  color: #dbdbdb;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,12 +38,22 @@ p {
 }
 
 a {
-  color: #46a6f7;
+  color: var(--a-color);
   text-underline-offset: 4px;
 }
 
 a:hover {
-  color: #dbdbdb;
+  color: var(--a-color-hover);
+}
+
+.introduction .container {
+  position: relative;
+}
+
+.light-dark-mode {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
 }
 
 .introduction-content {
@@ -55,23 +81,23 @@ a:hover {
   border-radius: 24px;
 }
 
-.portfolio .projects > div {
+.projects {
   position: relative;
   margin-bottom: 24px;
   padding: 24px;
   border-radius: 4px;
-  background-color: #363a40;
+  background-color: var(--projects-bg-color);
 }
 
-.portfolio .projects > div:last-child {
+.projects:last-child {
   margin-bottom: 0;
 }
 
-.portfolio .projects div img, .modal div img {
+.projects img, .modal div img {
   width: 100%;
 }
 
-.portfolio .projects div img {
+.projects img {
   cursor: pointer;
 }
 
@@ -131,13 +157,13 @@ footer div > div {
     margin: 0 auto;
   }
 
-  .portfolio .projects {
+  .portfolio .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
   }
 
-  .portfolio .projects > div {
+  .portfolio .projects {
     padding: 16px;
     margin-bottom: 0;
   }
