@@ -3,6 +3,13 @@ const screenShotModalImg = document.querySelector(".modal div img")
 const screenShots = document.querySelectorAll(".projects div > img")
 const lightDarkModeToggle = document.querySelector(".light-dark-mode")
 
+lightDarkModeToggle.onclick = (() => {
+  document.body.classList.toggle("light")
+  document.body.classList.contains("light") ? localStorage.theme = "light" : localStorage.theme = "dark";
+})
+
+if (localStorage.theme === "light") document.body.classList.add("light")
+
 screenShots.forEach((item) => {
   item.onclick = function () {
     screenShotModalImg.src = this.src;
@@ -17,8 +24,4 @@ screenShotModal.onclick = ((event) => {
     screenShotModalImg.src = "";
     screenShotModalImg.alt = "";
   }
-})
-
-lightDarkModeToggle.onclick = (() => {
-  document.body.classList.toggle("light")
 })
