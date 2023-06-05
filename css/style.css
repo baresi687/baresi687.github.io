@@ -130,8 +130,8 @@ h4 span {
 
 .projects img {
     cursor: pointer;
-    height: 288px;
-    object-fit: contain;
+    max-height: 288px;
+    object-fit: cover;
     object-position: top;
 }
 
@@ -150,6 +150,13 @@ h4 span {
     visibility: hidden;
     opacity: 0;
     transition: opacity .1s ease-in;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.modal::-webkit-scrollbar {
+    display: none;
 }
 
 .modal > div {
@@ -212,5 +219,9 @@ footer .contact-icons::after {
     .portfolio .projects {
         padding: 16px;
         margin-bottom: 0;
+    }
+
+    .projects img {
+        min-height: 288px;
     }
 }
