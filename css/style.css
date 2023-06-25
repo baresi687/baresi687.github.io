@@ -130,7 +130,7 @@ h4 span {
 
 .projects img {
     cursor: pointer;
-    max-height: 288px;
+    max-height: 320px;
     object-fit: cover;
     object-position: top;
 }
@@ -162,7 +162,7 @@ h4 span {
 .modal > div {
     position: relative;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: max-content;
     padding: 128px 0;
 }
 
@@ -222,6 +222,6 @@ footer .contact-icons::after {
     }
 
     .projects img {
-        min-height: 288px;
+        height: 288px;
     }
 }
