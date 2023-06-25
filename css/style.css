@@ -166,7 +166,8 @@ h4 span {
     padding: 128px 0;
 }
 
-.modal div .fa-xmark {
+.fa-xmark {
+    display: none;
     position: absolute;
     right: 0;
     top: 64px;
@@ -175,7 +176,11 @@ h4 span {
     cursor: pointer;
 }
 
-.show {
+.close-modal-toggle {
+    display: block;
+}
+
+.show-modal {
     visibility: visible;
     opacity: 1;
 }
