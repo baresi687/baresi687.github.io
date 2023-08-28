@@ -15,7 +15,7 @@ screenShots.forEach((item) => {
     screenShotModalImg.src = this.src.slice(0, this.src.length - 4) + `-modal.${this.src.slice(this.src.length - 3, this.src.length)}`
     screenShotModalImg.alt = this.alt;
     screenShotModal.classList.add("show-modal")
-    screenShotModalImg.onload = () => document.querySelector('.fa-xmark').classList.add('close-modal-toggle');
+    screenShotModalImg.onload = () => document.querySelector('.close-icon').classList.add('close-modal-toggle');
   }
 })
 
@@ -24,6 +24,6 @@ screenShotModal.onclick = ((event) => {
     screenShotModal.classList.remove("show-modal")
     screenShotModalImg.src = "";
     screenShotModalImg.alt = "";
-    document.querySelector('.fa-xmark').classList.remove('close-modal-toggle')
+    document.querySelector('.close-icon').classList.remove('close-modal-toggle')
   }
 })
