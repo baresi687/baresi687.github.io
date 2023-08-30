@@ -1,21 +1,31 @@
 const screenShotModal = document.querySelector(".modal")
 const screenShotModalImg = document.querySelector(".modal div img")
 const screenShots = document.querySelectorAll(".projects div > img")
+const modalCloseIcon = document.querySelector('.close-icon')
 const lightDarkModeToggle = document.querySelector(".light-dark-mode")
+
+function handleCloseIconPosition() {
+  modalCloseIcon.style.right =
+    window.innerWidth > screenShotModalImg.naturalWidth ? '0' : '16px'
+}
+
+if (localStorage.theme === "light") document.body.classList.add("light")
 
 lightDarkModeToggle.onclick = (() => {
   document.body.classList.toggle("light")
   document.body.classList.contains("light") ? localStorage.theme = "light" : localStorage.theme = "dark";
 })
 
-if (localStorage.theme === "light") document.body.classList.add("light")
+screenShotModalImg.onload = () => {
+  handleCloseIconPosition()
+  modalCloseIcon.classList.add('close-modal-toggle');
+}
 
 screenShots.forEach((item) => {
   item.onclick = function () {
     screenShotModalImg.src = this.src.slice(0, this.src.length - 4) + `-modal.${this.src.slice(this.src.length - 3, this.src.length)}`
     screenShotModalImg.alt = this.alt;
     screenShotModal.classList.add("show-modal")
-    screenShotModalImg.onload = () => document.querySelector('.close-icon').classList.add('close-modal-toggle');
   }
 })
 
@@ -24,6 +34,10 @@ screenShotModal.onclick = ((event) => {
     screenShotModal.classList.remove("show-modal")
     screenShotModalImg.src = "";
     screenShotModalImg.alt = "";
-    document.querySelector('.close-icon').classList.remove('close-modal-toggle')
+    modalCloseIcon.classList.remove('close-modal-toggle')
   }
 })
+
+window.onresize = () => {
+  handleCloseIconPosition()
+}
