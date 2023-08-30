@@ -1,6 +1,6 @@
 const screenShotModal = document.querySelector(".modal")
 const screenShotModalImg = document.querySelector(".modal div img")
-const screenShots = document.querySelectorAll(".projects div > img")
+const screenShots = document.querySelectorAll(".projects picture > img")
 const modalCloseIcon = document.querySelector('.close-icon')
 const lightDarkModeToggle = document.querySelector(".light-dark-mode")
 
