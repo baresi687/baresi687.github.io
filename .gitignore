@@ -1,2 +1,6 @@
 # IDE/Editors
 .idea/
+
+# Node.js and build
+node_modules/
+dist/
