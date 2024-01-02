@@ -1,283 +1,297 @@
 :root {
-    --bg-color: #27272c;
-    --text-color: #dbdbdb;
-    --a-color: #42a9ff;
-    --a-font-weight: 400;
-    --projects-bg-color: #363a40;
-    --icons-hover: white;
+  --bg-color: #27272c;
+  --text-color: #dbdbdb;
+  --a-color: #42a9ff;
+  --a-font-weight: 400;
+  --disabled-link: #a7a7a7;
+  --projects-bg-color: #363a40;
+  --icons-hover: white;
 }
 
 .light {
-    --bg-color: #F8F8F8;
-    --text-color: #27272c;
-    --a-color: #0066bb;
-    --a-font-weight: 600;
-    --projects-bg-color: #e3e3e3;
-    --icons-hover: #363a40;
+  --bg-color: #f8f8f8;
+  --text-color: #27272c;
+  --a-color: #0066bb;
+  --a-font-weight: 600;
+  --disabled-link: #606060;
+  --projects-bg-color: #e3e3e3;
+  --icons-hover: #363a40;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 8px 16px;
-    padding-top: 8px;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+  font-family: "Open Sans", sans-serif;
+  margin: 8px 16px;
+  padding-top: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 16px 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 16px 0;
 }
 
 .container {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 p {
-    font-size: 0.9rem;
-    line-height: 24px;
+  font-size: 0.9rem;
+  line-height: 24px;
 }
 
 .line-break::before {
-    content: '\a';
-    white-space: pre-line;
+  content: "\a";
+  white-space: pre-line;
 }
 
 a {
-    color: var(--a-color);
-    text-decoration: none;
-    font-weight: var(--a-font-weight);
+  color: var(--a-color);
+  text-decoration: none;
+  font-weight: var(--a-font-weight);
 }
 
 a:hover {
-    text-decoration: underline;
-    text-underline-offset: 6px;
-    text-decoration-thickness: 2px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
 }
 
 button {
-    color: inherit;
-    background-color: inherit;
-    border: none;
-    padding: 0;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+  padding: 0;
 }
 
 i {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .introduction .container {
-    position: relative;
+  position: relative;
 }
 
 .light-dark-mode {
-    position: absolute;
-    top: 4px;
-    right: 0;
-    display: flex;
-    cursor: pointer;
-    font-size: 1.2rem;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  display: flex;
+  cursor: pointer;
+  font-size: 1.2rem;
 }
 
 .introduction-content {
-    max-width: 544px;
+  max-width: 544px;
 }
 
 .introduction h4 {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 h4 span {
-    display: block;
+  display: block;
 }
 
 .contact-links {
-    display: flex;
-    gap: 16px;
-    margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
 }
 
 .contact-links span:nth-child(1) {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .mid-dot {
-    margin: 0 4px;
-    font-weight: 800;
+  margin: 0 4px;
+  font-weight: 800;
 }
 
 .portfolio {
-    margin: 56px auto;
-    padding: 24px 16px 16px;
-    max-width: 784px;
-    box-shadow: 0 0 13px -6px darkgrey;
-    border-radius: 24px;
+  margin: 56px auto;
+  padding: 24px 16px 16px;
+  max-width: 784px;
+  box-shadow: 0 0 13px -6px darkgrey;
+  border-radius: 24px;
 }
 
 .projects {
-    position: relative;
-    margin-bottom: 24px;
-    padding: 24px;
-    border-radius: 4px;
-    background-color: var(--projects-bg-color);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  position: relative;
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 4px;
+  background-color: var(--projects-bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .projects > * {
-    margin: 0;
+  margin: 0;
 }
 
 .projects:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.projects img, .modal div img {
-    width: 100%;
-    border-radius: 2px;
+.projects img,
+.modal div img {
+  width: 100%;
+  border-radius: 2px;
 }
 
 .projects img {
-    cursor: pointer;
-    object-fit: cover;
-    object-position: top;
+  cursor: pointer;
+  object-fit: cover;
+  object-position: top;
 }
 
 .project-links {
-    margin-top: auto;
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
 }
 
 .project-links > a {
-    width: fit-content;
+  width: fit-content;
+}
+
+.disabled-links {
+  color: var(--disabled-link);
+  font-style: italic;
+  font-size: 0.9rem;
 }
 
 .portfolio h3 {
-    text-align: center;
-    margin-top: 0;
+  text-align: center;
+  margin-top: 0;
 }
 
 .modal {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgb(12 12 12 / 80%);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .1s ease-in;
-    overflow: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(12 12 12 / 80%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .modal::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .modal > div {
-    position: relative;
-    margin: 0 auto;
-    max-width: max-content;
-    padding: 104px 0;
+  position: relative;
+  margin: 0 auto;
+  max-width: max-content;
+  padding: 104px 0;
 }
 
 .close-icon {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 32px;
-    color: whitesmoke;
-    font-size: 56px;
-    cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 32px;
+  color: whitesmoke;
+  font-size: 56px;
+  cursor: pointer;
 }
 
 .close-modal-toggle {
-    display: flex;
+  display: flex;
 }
 
 .show-modal {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 footer {
-    margin: 104px 0 24px 0;
-    text-align: center;
+  margin: 104px 0 24px 0;
+  text-align: center;
 }
 
 footer div > div {
-    margin: 16px;
+  margin: 16px;
 }
 
 .contact-icons {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .contact-icons::after {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    font-family: "Font Awesome 5 Brands", sans-serif;
-    padding-left: 8px;
-    padding-bottom: 2px;
-    vertical-align: middle;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  padding-left: 8px;
+  padding-bottom: 2px;
+  vertical-align: middle;
 }
 
 .linkedin::after {
-    content: "\f08c";
+  content: "\f08c";
 }
 
 .github::after {
-    content: "\f09b";
+  content: "\f09b";
 }
 
 footer .contact-icons::after {
-    padding: 0;
-    font-size: 24px;
+  padding: 0;
+  font-size: 24px;
 }
 
 .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    font-weight: normal;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-weight: normal;
 }
 
 .footer-links > a {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .footer-links > a:hover {
-    color: var(--icons-hover);
+  color: var(--icons-hover);
 }
 
 @media screen and (min-width: 767px) {
-    .container {
-        max-width: 784px;
-        margin: 0 auto;
-    }
+  .container {
+    max-width: 784px;
+    margin: 0 auto;
+  }
 
-    .portfolio .projects-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 16px;
-    }
+  .portfolio .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+  }
 
-    .portfolio .projects {
-        padding: 16px;
-        margin-bottom: 0;
-    }
+  .portfolio .projects {
+    padding: 16px;
+    margin-bottom: 0;
+  }
 
-    .projects img {
-        height: 288px;
-    }
+  .projects img {
+    height: 288px;
+  }
 }
